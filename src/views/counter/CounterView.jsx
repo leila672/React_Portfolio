@@ -13,7 +13,7 @@ const increaseCounter = () => {
   setCounter(counter + 1);
 };
 const decreaseCounter = () => {
-  if (counter != 0) setCounter(counter - 1);
+  if (counter !== 0) setCounter(counter - 1);
 };
 
 return (

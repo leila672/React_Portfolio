@@ -1,38 +1,28 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Counter from "./Counter";
-import CounterActions from "./CounterActions";
-import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Card from "react-bootstrap/Card";
+import './App.css';
+import CounterView from './views/counter/CounterView';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from "./components/navbar/NavBar";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Products from './views/products/Products';
+import ProductDetails from "./views/productdetails/ProductDetails";
+import About from "./views/about/About";
+import Home from "./views/home/Home";
+import Erorr from "./views/erorr/Erorr";
 
 function App() {
-  const [counter, setCounter] = useState(10);
-
-  const increaseCounter = () => {
-    setCounter(counter + 1);
-  };
-  const decreaseCounter = () => {
-    if (counter != 0) setCounter(counter - 1);
-  };
-
-  return (
-    <div className="App text-center">
-      <Card style={{ width: "18rem",margin:"5% auto"}}>
-        <Card.Body>
-          <Card.Title>Counter</Card.Title>
-          <Card.Text>
-          <Counter counter={counter} />
-          </Card.Text>
-          <CounterActions
-        onIncrease={increaseCounter}
-        ondecrease={decreaseCounter}
-      />
-        </Card.Body>
-      </Card>
-
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <Navbar/>
+            <Routes>
+                <Route path="/" element={<Home/>}></Route>
+                <Route path="/counter" element={<CounterView/>} />
+                <Route path="/products" element={<Products/>} />
+                <Route path="/products/:id" element={<ProductDetails/>}></Route>
+                <Route path="/about" element={<About/>}></Route>
+                <Route path="*" element={<Erorr/>}></Route>
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;

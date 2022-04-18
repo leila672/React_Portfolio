@@ -1,10 +1,19 @@
 #empty{
     font-size: x-large;
     color: rgb(218, 77, 77);
+    background-color: antiquewhite;
     margin: 1rem auto;
-    width: 50vw;
+    width:30vw;
+    text-align: center;
     }
     #container{
         width: 50vw;
         margin: 1rem auto;
+    }
+    .formstyle
+    {
+        background-color: rgb(215, 221, 226);
+        padding:10px;
+        margin:20px 80px 0px 80px;
+        
     }

@@ -29,6 +29,10 @@ function NavBar(){
                         <li className="nav-item">
                             <Link className="nav-link" to="/todo">Todo List</Link>
                         </li>
+
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/form">Register</Link>
+                        </li>
                     </ul>
                 </div>
             </div>

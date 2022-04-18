@@ -9,6 +9,7 @@ import About from "./views/about/About";
 import Home from "./views/home/Home";
 import Erorr from "./views/erorr/Erorr";
 import Todo from './components/todoList/Todo'
+import Forms from './components/form/Form';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/products/:id" element={<ProductDetails/>}></Route>
                 <Route path="/about" element={<About/>}></Route>
                 <Route path='/todo' element={<Todo/>} />
+                <Route path="/form" element={<Forms />} />
                 <Route path="*" element={<Erorr/>}></Route>
             </Routes>
         </BrowserRouter>

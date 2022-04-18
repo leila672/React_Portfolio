@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+import './TodoList.css' 
+
 function TodoForm({addItem}){
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
@@ -10,7 +12,7 @@ function TodoForm({addItem}){
         setContent("");
       };
     return(
-        <div className="">
+        <div className="formstyle">
             <Form onSubmit={handleSubmission}>
                 <Form.Group className="mb-3 mx-auto col-6"   controlId="formBasicTitle">
                     <Form.Label>Tile</Form.Label>
